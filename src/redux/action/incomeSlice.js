@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 var initialState = {
-  data: [],
+  data: []
 };
 
 const incomeSlice = createSlice({

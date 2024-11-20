@@ -1,11 +1,12 @@
+import "../../style/index.css";
 export const Question = ({ question, questionNumber }) => {
   return (
     <>
-      <h2>
-        <span style={{ fontSize: "25px", color: "blue" }}>
-          Question-{questionNumber}{" "}
+      <h2 className="ques">
+        <span className="question-color">
+          Quiz-{questionNumber}{" "}
         </span>
-        <span style={{ marginLeft: "20px" }}></span> {question}
+        <span style={{ marginRight: "20px" }}></span> {question}
       </h2>
     </>
   );

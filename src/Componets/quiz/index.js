@@ -7,6 +7,7 @@ import { useState } from "react";
 import "../../style/index.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import LocalImages from "../../assest";
 
 const generateOption = () => {
   const array = [];
@@ -67,10 +68,11 @@ const Quiz = () => {
   }
 
   return (
-    <div>
+    <div className="main-background-setup">
+      <div className="second-background">
       <center>
-        <h1 style={{ textAlign: "center" }}>Quiz</h1>
-        <h3 style={{ marginTop: "20px" }}>{testTypeDetail}</h3>
+        <img className="quiz-image" src={LocalImages[0].Quiz}/>
+        <h3 style={{ marginTop: "20px" }}>Quiz Type - {testTypeDetail}</h3>
         <br />
         <Question
           question={currentQuestion.question}
@@ -89,8 +91,8 @@ const Quiz = () => {
           {shuffle[3]}
         </button>
         <Timer onTime={onTime}></Timer>
-        <div className="score">Score: {score}</div>
       </center>
+    </div>
     </div>
   );
 };
