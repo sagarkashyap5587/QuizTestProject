@@ -16,7 +16,6 @@ const Quiz = () => {
   if(userData.length === 0) {
     history('/')
   }
-  const dispatch = useDispatch();
   const testTypeDetail = userData[0].testType;
   const [currentQuestion, setCurrentQuestion] = useState(
     generateQuestion(testTypeDetail)
