@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 const UserForm = () => {
     const dispatch = useDispatch()
-    const d= useSelector((state)=> state.incomes.data)
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [testType, setTestType] = useState('');

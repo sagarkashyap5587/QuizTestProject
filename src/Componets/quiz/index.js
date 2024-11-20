@@ -22,6 +22,9 @@ const generateOption = () => {
 const Quiz = () => {
   const userData = useSelector((state) => state.incomes.data);
   const history = useNavigate();
+  if(userData.length === 0) {
+    history('/')
+  }
   const testTypeDetail = userData[0].testType;
   const [currentQuestion, setCurrentQuestion] = useState(
     generateQuestion(testTypeDetail)
