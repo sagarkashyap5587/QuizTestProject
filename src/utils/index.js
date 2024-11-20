@@ -1,21 +1,4 @@
-// Generate Simple Question
 
-// export const generateQuestion = () => {
-//   const operations = ["+", "-", "*", "/"];
-//   const num1 = Math.floor(Math.random() * 50) + 1;
-//   const num2 = Math.floor(Math.random() * 50) + 1;
-//   const operation = operations[Math.floor(Math.random() * operations.length)];
-
-//   const question = `${num1} ${operation} ${num2}`;
-//   const answer = eval(question);
-//   return {
-//     question,
-//     answer: parseFloat(answer.toFixed(2)),
-//   };
-// };
-
-
-// Multi type question generate function
 
 export const generateQuestion = (value) => {
   const operations = ["+", "-", "*", "/"];
@@ -56,4 +39,16 @@ export const generateQuestion = (value) => {
       answer: parseFloat(answer.toFixed(2)),
     };
   }
+};
+
+
+export const generateOption = () => {
+  const array = [];
+  const option1 = Math.floor(Math.random() * 50) + 1;
+  const option2 = Math.floor(Math.random() * 50) + 1;
+  const option3 = Math.floor(Math.random() * 50) + 1;
+  array.push(option1);
+  array.push(option2);
+  array.push(option3);
+  return array;
 };
